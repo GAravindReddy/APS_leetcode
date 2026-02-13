@@ -9,8 +9,8 @@ class Solution {
 
     private void helper(TreeNode node, List<Integer> res) {
         if (node == null) return;
-        helper(node.left, res);
-        res.add(node.val);
-        helper(node.right, res);
+        helper(node.left, res);  // Visit left
+        res.add(node.val);       // Visit root
+        helper(node.right, res); // Visit right
     }
 }
